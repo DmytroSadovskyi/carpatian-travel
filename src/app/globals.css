@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+body {
+  color: #fff;
+}
+
+.container {
+  width: 100%;
+  max-width: 480px;
+  height: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    padding: 0 32px;
+    max-width: 768px;
+    max-width: none;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .container {
+    max-width: none;
+    width: 1280px;
+  }
+}
