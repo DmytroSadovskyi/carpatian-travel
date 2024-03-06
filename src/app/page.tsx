@@ -1,10 +1,11 @@
 import About from './sections/About';
 import Header from './sections/Header';
 import Hero from './sections/Hero';
-import OurServices from './sections/Services';
+
 import Career from './sections/Career';
 import Contacts from './sections/Contacts/Contacts';
 import Gallery from './sections/Gallery';
+import Services from './sections/Services';
 
 export default function Home() {
   return (
@@ -13,7 +14,7 @@ export default function Home() {
       <main>
         <Hero />
         <About />
-        {/* <OurServices /> */}
+        <Services />
         {/* <Career /> */}
         {/* <Gallery /> */}
         {/* <Contacts /> */}

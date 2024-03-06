@@ -1,7 +1,7 @@
 'use client';
-import Image from 'next/image';
+
 import { useState } from 'react';
-import logo from '../../../../public/images/logo.svg';
+import LogoIcon from '../../../../public/images/logo.svg';
 import MobileMenu from '@/app/components/MobileMenu';
 
 export default function Header() {
@@ -18,35 +18,58 @@ export default function Header() {
   };
 
   return (
-    <header className="w-full py-9 z-10 absolute">
+    <header className="w-full py-9 z-10 absolute md:py-6">
       <div className="container">
         <nav className="flex items-center justify-between">
           <a href="/">
-            <Image src={logo} alt="logo" />
+            <LogoIcon />
           </a>
 
-          <ul className="hidden md:flex gap-[24px]">
+          <ul className="hidden md:flex gap-6">
             <li>
-              <a href="" className="">
+              <a
+                href=""
+                className="underline text-[14px] leading-none tracking-[1.4px]"
+              >
                 About
               </a>
             </li>
             <li>
-              <a href="">Services</a>
+              <a
+                href=""
+                className="underline text-[14px] leading-none tracking-[1.4px]"
+              >
+                Services
+              </a>
             </li>
             <li>
-              <a href="">Career</a>
+              <a
+                href=""
+                className="underline text-[14px] leading-none tracking-[1.4px]"
+              >
+                Career
+              </a>
             </li>
             <li>
-              <a href="">Gallery</a>
+              <a
+                href=""
+                className="underline text-[14px] leading-none tracking-[1.4px]"
+              >
+                Gallery
+              </a>
             </li>
             <li>
-              <a href="">Contacts</a>
+              <a
+                href=""
+                className="underline text-[14px] leading-none tracking-[1.4px]"
+              >
+                Contacts
+              </a>
             </li>
           </ul>
           <button
             type="button"
-            className="md:hidden uppercase"
+            className="underline text-[14px] leading-none tracking-[1.4px] md:hidden uppercase"
             onClick={handleOpen}
           >
             Menu

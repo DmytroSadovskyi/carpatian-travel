@@ -12,7 +12,7 @@ export default function MobileMenu({ onClose }: MobileMenuProps) {
     >
       <div className="container relative flex items-center justify-center w-full h-screen">
         <button
-          className="absolute top-11 right-5 uppercase"
+          className=" absolute top-11 right-5 uppercase text-[14px] leading-none tracking-[1.4px]"
           type="button"
           onClick={onClose}
         >
@@ -20,27 +20,47 @@ export default function MobileMenu({ onClose }: MobileMenuProps) {
         </button>
         <ul className="flex flex-col justify-center gap-12 items-center">
           <li>
-            <a className="text-lg" href="" onClick={onClose}>
+            <a
+              className="underline text-[18px] leading-none"
+              href=""
+              onClick={onClose}
+            >
               About
             </a>
           </li>
           <li>
-            <a className="text-lg" href="" onClick={onClose}>
+            <a
+              className="underline text-[18px] leading-none"
+              href=""
+              onClick={onClose}
+            >
               Services
             </a>
           </li>
           <li>
-            <a className="text-lg" href="" onClick={onClose}>
+            <a
+              className="underline text-[18px] leading-none"
+              href=""
+              onClick={onClose}
+            >
               Career
             </a>
           </li>
           <li>
-            <a className="text-lg" href="" onClick={onClose}>
+            <a
+              className="underline text-[18px] leading-none"
+              href=""
+              onClick={onClose}
+            >
               Gallery
             </a>
           </li>
           <li>
-            <a className="text-lg" href="" onClick={onClose}>
+            <a
+              className="underline text-[18px] leading-none"
+              href=""
+              onClick={onClose}
+            >
               Contacts
             </a>
           </li>
