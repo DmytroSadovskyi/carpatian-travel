@@ -8,21 +8,24 @@ const config: Config = {
   ],
   theme: {
     screens: {
-      sm: '320px',
+      sm: '480px',
       md: '768px',
       lg: '1280px',
       smMax: { max: '767.98px' },
       mdMax: { min: '768px', max: '1279.98px' },
     },
-    container: {
-      padding: {
-        DEFAULT: '20px',
-        sm: '20px',
-        md: '32px',
-        lg: '24px',
+    extend: {
+      container: {
+        padding: {
+          DEFAULT: '20px',
+          sm: '20px',
+          md: '32px',
+          lg: '24px',
+        },
+        center: true,
       },
-      center: true,
     },
+
     backgroundImage: {
       gradient: 'linear-gradient(rgba(2, 15, 8, 0.5), rgba(2, 15, 8, 0.5))',
       hero: "image-set(url('/images/bg/sections/hero/hero-min.png') 1x, url('/images/bg/sections/hero/hero@2x-min.png') 2x)",
