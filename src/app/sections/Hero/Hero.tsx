@@ -1,19 +1,9 @@
-import bg from '../../../../public/images/bg/sections/hero-bg.jpg';
+'use client';
+import { Link } from 'react-scroll';
 
 export default function Hero() {
   return (
-    <section
-      style={{
-        backgroundImage: `linear-gradient(rgba(2, 15, 8, 0.5), rgba(2, 15, 8, 0.5)),
-url(${bg.src})`,
-
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
-        backgroundPosition: '50%',
-        backgroundColor: 'rgba(2, 15, 8, 0.50)',
-      }}
-      className=" pt-[106px] pb-[56px] md:pt-[124px] lg:pt-[130px] lg:pb-[104px]"
-    >
+    <section className="bg-hero pt-[106px] pb-[56px] md:bg-heroTab md:pt-[124px] lg:bg-heroDesc lg:pt-[130px] lg:pb-[104px] bg-cover bg-center bg-no-repeat gradient">
       <div className="container flex flex-col gap-6 md:grid md:grid-cols-[426px_230px]  md:gap-y-0 md:grid-rows-[78px_56px_160px_28px_0px] lg:grid-cols-[646px_294px] lg:grid-rows-[112px_181px_200px_28px_0px] justify-between">
         <p className="flex self-end flex-col md:col-start-2 ">
           <span className="text-[37px]/[80%] uppercase font-thin tracking-[3.665px] md:text-[67px]/[80%] md:tracking-[5.71px] lg:tracking-[0.71px] lg:text-[98px]/[80%]">
@@ -36,12 +26,13 @@ url(${bg.src})`,
             best service!
           </p>
 
-          <a
-            href=""
+          <Link
+            to="contacts"
+            smooth={true}
             className="button text-center md:self-end uppercase font-bold text-lg leading-[2.7] lg:text-2xl lg:py-4"
           >
             <span>join now</span>
-          </a>
+          </Link>
         </div>
       </div>
     </section>

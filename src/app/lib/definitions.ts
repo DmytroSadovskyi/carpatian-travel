@@ -16,15 +16,16 @@ export type Service = {
   titles: string[];
 };
 
-type GalleryItem = {
-  id: number;
+export type GalleryItem = {
+  id?: number;
   url: string;
+  alt: string;
 };
 
 export const services: Service[] = [
   {
     id: 1,
-    bg: '/images/bg/offers/offers-bg-1-min.jpg',
+    bg: '/images/bg/offers/slide-1.png',
     image: '/images/offers/slide-1-min.jpg',
     slogan: 'Feel the adrenaline rush',
     description:
@@ -34,7 +35,7 @@ export const services: Service[] = [
   },
   {
     id: 2,
-    bg: '/images/bg/offers/offers-bg-2-min.jpg',
+    bg: '/images/bg/offers/slide-2.png',
     image: '/images/offers/slide-2-min.jpg',
     slogan: 'Destroy your limitations',
     description:
@@ -44,7 +45,7 @@ export const services: Service[] = [
   },
   {
     id: 3,
-    bg: '/images/bg/offers/offers-bg-3-min.jpg',
+    bg: '/images/bg/offers/slide-3.png',
     image: '/images/offers/slide-3-min.jpg',
     slogan: 'Get Inspired',
     description:
@@ -54,7 +55,7 @@ export const services: Service[] = [
   },
   {
     id: 4,
-    bg: '/images/bg/offers/offers-bg-4-min.jpg',
+    bg: '/images/bg/offers/slide-4.png',
     image: '/images/offers/slide-4-min.jpg',
     slogan: 'Overcome your fears',
     description:
@@ -64,7 +65,7 @@ export const services: Service[] = [
   },
   {
     id: 5,
-    bg: '/images/bg/offers/offers-bg-5-min.jpg',
+    bg: '/images/bg/offers/slide-5.png',
     image: '/images/offers/slide-5-min.jpg',
     slogan: 'Trust the flow',
     description:
@@ -73,6 +74,10 @@ export const services: Service[] = [
     title: servicesTitles[4],
   },
 ];
+
+export interface MobileMenuProps {
+  onClose: () => void;
+}
 
 export interface OffersSliderProps {
   slides: Service[];

@@ -1,5 +1,5 @@
 'use client';
-
+import { Link } from 'react-scroll';
 import { useState } from 'react';
 import LogoIcon from '../../../../public/images/logo.svg';
 import MobileMenu from '@/app/components/MobileMenu';
@@ -22,49 +22,54 @@ export default function Header() {
       <div className="container">
         <nav className="flex items-center justify-between">
           <a href="/">
-            <LogoIcon />
+            <LogoIcon aria-label="logo" />
           </a>
 
           <ul className="hidden md:flex gap-6">
             <li>
-              <a
-                href=""
+              <Link
+                to="about"
+                smooth={true}
                 className="underline text-[14px] leading-none tracking-[1.4px]"
               >
                 About
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href=""
+              <Link
+                to="services"
+                smooth={true}
                 className="underline text-[14px] leading-none tracking-[1.4px]"
               >
                 Services
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href=""
+              <Link
+                to="career"
+                smooth={true}
                 className="underline text-[14px] leading-none tracking-[1.4px]"
               >
                 Career
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href=""
+              <Link
+                to="gallery"
+                smooth={true}
                 className="underline text-[14px] leading-none tracking-[1.4px]"
               >
                 Gallery
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href=""
+              <Link
+                to="contacts"
+                smooth={true}
                 className="underline text-[14px] leading-none tracking-[1.4px]"
               >
                 Contacts
-              </a>
+              </Link>
             </li>
           </ul>
           <button

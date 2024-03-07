@@ -14,7 +14,7 @@ export default function OfferSlide({
   slideTo,
 }: OffersSlideProps) {
   return (
-    <div className="w-full h-full relative">
+    <div className="w-full h-full relative bg-gradient">
       <Image
         src={bg}
         alt={title}
@@ -25,10 +25,10 @@ export default function OfferSlide({
       />
       <div className="container pt-[54px] md:pt-16 lg:pt-[104px]">
         <div className="md:flex md:flex-row md:justify-between md:pb-6 lg:pb-5 lg:justify-normal lg:gap-[162px]">
-          <h2 className="uppercase font-thin text-[40px] [max-width: pb-6 md:mb-0 md:pb-0 md:text-[67px] leading-none lg:text-[98px] whitespace-nowrap">
+          <h2 className="uppercase font-thin text-[40px] tracking-[-1.6px] leading-[1.4] smMax:pb-6 md:mb-0 md:pb-0 md:text-[67px] md:tracking-[-2.68px] md:leading-none lg:text-[98px] whitespace-nowrap">
             we <span className="font-medium">offer</span>
           </h2>
-          <div className="font-thin text-[43px] md:text-titleMd text-right pb-4 md:pb-0 lg:text-[98px] lg:leading-none">
+          <div className="font-thin text-[43px] md:text-[67px] md:leading-[1.16] text-right smMax:pb-4 md:pb-0 lg:text-[98px] lg:leading-none">
             {id.toString().padStart(2, '0')}/
             <span className="opacity-20">
               {titles.length.toString().padStart(2, '0')}
@@ -43,7 +43,7 @@ export default function OfferSlide({
               fill
               quality={100}
               sizes="100vw"
-              className="object-cover object-center pb-2 md:pb-0"
+              className="object-cover object-center smMax:pb-2"
             />
           </div>
           <p className="text-xs font-extralight pb-6 text-right md:hidden">
@@ -69,14 +69,14 @@ export default function OfferSlide({
                     <span className="uppercase">{titleItem}</span>
                   </div>
                   {titleItem === title ? (
-                    <p className="text-xs font-extralight hidden xl:block md:leading-[24px] tracking-[2.4px] capitalize">
+                    <p className="text-xs font-extralight hidden  lg:block md:leading-[24px] tracking-[2.4px] capitalize">
                       {slogan}
                     </p>
                   ) : null}
                 </li>
               ))}
             </ul>
-            <p className="text-xs font-extralight hidden mdOnly:block md:leading-[24px]">
+            <p className="text-xs font-extralight hidden mdMax:block md:leading-[24px]">
               {slogan}
             </p>
             <p className="text-sm font-extralight md:text-[13px] xl:max-w-[293px] lg:ml-auto lg:text-lg lg:leading-[24px]">

@@ -1,6 +1,5 @@
-interface MobileMenuProps {
-  onClose: () => void;
-}
+import { MobileMenuProps } from '@/app/lib/definitions';
+import { Link } from 'react-scroll';
 
 export default function MobileMenu({ onClose }: MobileMenuProps) {
   return (
@@ -11,58 +10,65 @@ export default function MobileMenu({ onClose }: MobileMenuProps) {
       className="fixed top-0 left-0 w-screen h-screen backdrop-blur-xl"
     >
       <div className="container relative flex items-center justify-center w-full h-screen">
-        <button
-          className=" absolute top-11 right-5 uppercase text-[14px] leading-none tracking-[1.4px]"
-          type="button"
-          onClick={onClose}
-        >
-          close
-        </button>
+        <div className="absolute top-11 right-5">
+          <button
+            className="underline uppercase text-[14px] leading-none tracking-[1.4px]"
+            type="button"
+            onClick={onClose}
+          >
+            close
+          </button>
+        </div>
         <ul className="flex flex-col justify-center gap-12 items-center">
           <li>
-            <a
+            <Link
               className="underline text-[18px] leading-none"
-              href=""
+              to="about"
+              smooth={true}
               onClick={onClose}
             >
               About
-            </a>
+            </Link>
           </li>
           <li>
-            <a
+            <Link
               className="underline text-[18px] leading-none"
-              href=""
+              to="services"
+              smooth={true}
               onClick={onClose}
             >
               Services
-            </a>
+            </Link>
           </li>
           <li>
-            <a
+            <Link
               className="underline text-[18px] leading-none"
-              href=""
+              to="career"
+              smooth={true}
               onClick={onClose}
             >
               Career
-            </a>
+            </Link>
           </li>
           <li>
-            <a
+            <Link
               className="underline text-[18px] leading-none"
-              href=""
+              to="gallery"
+              smooth={true}
               onClick={onClose}
             >
               Gallery
-            </a>
+            </Link>
           </li>
           <li>
-            <a
+            <Link
               className="underline text-[18px] leading-none"
-              href=""
+              to="contacts"
+              smooth={true}
               onClick={onClose}
             >
               Contacts
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
