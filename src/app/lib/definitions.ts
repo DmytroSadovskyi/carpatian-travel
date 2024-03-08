@@ -16,6 +16,12 @@ export type Service = {
   titles: string[];
 };
 
+type CareerInfoItem = {
+  id: number;
+  title: string;
+  description: string;
+};
+
 export type GalleryItem = {
   id?: number;
   url: string;
@@ -89,4 +95,8 @@ export interface OffersSlideProps extends Service {
 
 export interface GalleryListProps {
   images: GalleryItem[];
+}
+
+export interface CareerProps {
+  items: CareerInfoItem[];
 }

@@ -16,7 +16,7 @@ export default function Hero() {
         <h1 className="text-[40px] leading-[1.4] tracking-[-1.6px] font-thin uppercase  md:text-[67px] md:leading-none  md:col-start-1 md:row-start-1 md:row-end-4 md:tracking-[-2.68px] lg:text-[98px] lg:leading-none">
           <span className="font-medium">Uncover</span> Carpathian’s Secrets
         </h1>
-        <p className="text-[10px] leading-4 font-thin md:col-start-1  md:tracking-[1.26px] w-[70%] md:w-2/3 md:text-sm md:leading-4 lg:w-full">
+        <p className="text-[10px] leading-4 font-extralight md:col-start-1  md:tracking-[1.26px] w-[70%] md:w-2/3 md:text-sm md:leading-4 lg:w-full">
           Hoverla / Yaremche / Zakarpattia / Vorokhta / Synevyr Lake / Bukovel
         </p>
         <div className="md:col-start-2 md:row-start-3">

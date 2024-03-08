@@ -21,7 +21,9 @@ export default function MainPage() {
         <Element name="services">
           <Services />
         </Element>
-        {/* <Element name="career"> <Career /></Element> */}
+        <Element name="career">
+          <Career />
+        </Element>
         <Element name="gallery">
           <Gallery />
         </Element>

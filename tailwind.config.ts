@@ -24,6 +24,10 @@ const config: Config = {
         },
         center: true,
       },
+      colors: {
+        input: 'rgba(255, 255, 255, 0.05)',
+        error: '#FF5757',
+      },
     },
 
     backgroundImage: {

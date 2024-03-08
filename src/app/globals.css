@@ -131,3 +131,78 @@ body {
   display: block;
   width: 100%;
 }
+
+.phone-label::after {
+  content: '+38';
+  position: absolute;
+  bottom: 0.7px;
+  left: 8px;
+  color: #fff;
+  width: 36px;
+  font-size: 13px;
+  line-height: 24px;
+  font-weight: 200;
+  letter-spacing: 0.025em;
+}
+
+@media screen and (min-width: 1280px) {
+  .phone-label::after {
+    font-size: 20px;
+  }
+}
+
+.check {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.checkbox {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  transition: all 250ms ease-in;
+}
+
+.unchecked {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 250ms ease-in, visibility 250ms ease-in;
+}
+
+.check:checked ~ .agreement-label > .unchecked {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.checked {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 250ms ease-in, visibility 250ms ease-in;
+}
+
+.check:checked ~ .agreement-label > .checked {
+  opacity: 1;
+  visibility: visible;
+}
+
+.check:focus ~ .agreement-label > .unchecked {
+  outline: 1px solid #fff;
+  visibility: visible;
+}
+
+.check:checked:focus ~ .agreement-label > .checked {
+  outline: 1px solid #fff;
+  visibility: visible;
+}

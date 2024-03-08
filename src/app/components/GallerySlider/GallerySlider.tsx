@@ -62,7 +62,7 @@ export default function GallerySlider({ images }: GalleryListProps) {
               <div
                 className={cn(
                   'relative right-[80px] w-[415px] lg:w-[606px] h-[294px] lg:h-[429px]',
-                  isActive ? 'right-[90px] lg:right-[95px]' : 'opacity-75'
+                  isActive ? 'right-[90px] lg:right-[95px]' : 'opacity-[0.75]'
                 )}
               >
                 <GalleryItem url={image.url} alt={image.alt} />
@@ -80,7 +80,7 @@ export default function GallerySlider({ images }: GalleryListProps) {
           Back
         </button>
         <button
-          className=" font-thin text-[33px] leading-none uppercase"
+          className="font-thin text-[33px] leading-none uppercase"
           onClick={() => swiperRef.current?.slideNext()}
           type="button"
         >
