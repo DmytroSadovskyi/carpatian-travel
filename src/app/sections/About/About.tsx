@@ -1,10 +1,21 @@
+import { motion } from 'framer-motion';
 export default function About() {
   return (
     <section className="bg-about bg-cover bg-[20%_50%] bg-no-repeat py-[54px] md:py-[64px] md:bg-aboutTab lg:bg-aboutDesc  lg:py-[104px]">
       <div className="container grid gap-2 md:grid-cols-[218px_266px_220px] md:grid-rows-[295px_215px_117px] md:gap-x-0 md:gap-y-4 lg:grid-cols-[50%_25%_25%] lg:grid-rows-[250px_192px_120px]">
-        <h2 className="mb-[5px] font-thin text-4xl leading-[1.4] tracking-[-1.6px] md:col-start-1 md:col-end-3 md:text-[67px] md:leading-none md:tracking-[-2.68px] lg:text-[98px] lg:leading-none lg:tracking-[-3.92px]  lg:col-end-2 lg:mb-0">
+        <motion.h2
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.5 }}
+          variants={{
+            hidden: { opacity: 0, x: -100 },
+            visible: { opacity: 1, x: 0 },
+          }}
+          className="mb-[5px] font-thin text-4xl leading-[1.4] tracking-[-1.6px] md:col-start-1 md:col-end-3 md:text-[67px] md:leading-none md:tracking-[-2.68px] lg:text-[98px] lg:leading-none lg:tracking-[-3.92px]  lg:col-end-2 lg:mb-0"
+        >
           WHO <span className="font-medium">WE ARE</span>
-        </h2>
+        </motion.h2>
         <p className="text-left w-[180px] font-extralight text-sm mb-[20px] md:w-full md:col-start-3 md:mb-0 md:text-base leading-5 lg:col-start-2 lg:text-lg lg:leading-6 lg:pl-[24px] lg:pt-[6px]">
           <span className="font-normal">a team of enthusiasts</span> who are
           fully committed to the mission of creating unforgettable and
@@ -27,12 +38,22 @@ export default function About() {
             we have a tour for everyone.
           </p>
         </div>
-        <p className="font-extralight text-sm text-justify md:text-base leading-5 md:w-[463px] md:row-start-3 md:col-start-2 md:self-end lg:col-start-1 lg-col-end-2">
+        <motion.p
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.5 }}
+          variants={{
+            hidden: { opacity: 0, x: 100 },
+            visible: { opacity: 1, x: 0 },
+          }}
+          className="font-extralight text-sm text-justify md:text-base leading-5 md:w-[463px] md:row-start-3 md:col-start-2 md:self-end lg:col-start-1 lg-col-end-2"
+        >
           <span className="font-normal"> We use methods</span> that are
           time-tested and proven. Our expert guides with in-depth knowledge of
           the Carpathian landscapes lead you safely through the mysteries of
           these mountains.
-        </p>
+        </motion.p>
       </div>
     </section>
   );

@@ -43,7 +43,7 @@ export default function CareerForm() {
       <div className="flex flex-col gap-4 [&>input]:block font-extralight md:flex-row">
         <div className="flex flex-col gap-4 lg:gap-6 [&>input]:block font-extralight md:w-[221px] lg:w-[290px]">
           <label
-            className={`flex flex-col gap-1 relative text-xs leading-[2] tracking-[2.4px] ${
+            className={`flex flex-col gap-2 relative text-xs leading-[2] tracking-[2.4px] ${
               errors.fullName ? 'text-error' : ''
             }`}
           >
@@ -63,8 +63,11 @@ export default function CareerForm() {
               placeholder="John Smith"
             />
             {errors.fullName && (
-              <div className="flex gap-1 items-center absolute right-0 top-[52px] lg:top-[58px]">
-                <ErrorIcon className="w-[18px] h-[18px]" />
+              <div className="flex gap-2 items-center absolute right-0 top-[56px] lg:top-[60px]">
+                <ErrorIcon
+                  className="w-[18px] h-[18px]"
+                  aria-label="error-icon"
+                />
                 <span className="text-error text-xs leading-[2] tracking-[2.4px]">
                   {errors.fullName.message}
                 </span>
@@ -73,7 +76,7 @@ export default function CareerForm() {
           </label>
 
           <label
-            className={`flex flex-col gap-1 relative text-xs leading-[2] tracking-[2.4px] ${
+            className={`flex flex-col gap-2 relative text-xs leading-[2] tracking-[2.4px] ${
               errors.email ? 'text-error' : ''
             }`}
           >
@@ -93,8 +96,11 @@ export default function CareerForm() {
               placeholder="johnsmith@email.com"
             />
             {errors.email && (
-              <div className="flex gap-1 items-center absolute right-0 top-[52px] lg:top-[58px]">
-                <ErrorIcon className="w-[18px] h-[18px]" />
+              <div className="flex gap-1 items-center absolute right-0 top-[56px] lg:top-[60px]">
+                <ErrorIcon
+                  className="w-[18px] h-[18px]"
+                  aria-label="error-icon"
+                />
                 <span className="text-error text-xs leading-[2] tracking-[2.4px]">
                   {errors.email.message}
                 </span>
@@ -102,7 +108,7 @@ export default function CareerForm() {
             )}
           </label>
 
-          <label className="flex flex-col gap-1 relative text-xs leading-[2] tracking-[2.4px]">
+          <label className="flex flex-col gap-2 relative text-xs leading-[2] tracking-[2.4px]">
             Position
             <input
               type="text"
@@ -115,7 +121,7 @@ export default function CareerForm() {
 
           <label
             htmlFor="phone"
-            className={`phone-label flex gap-1 flex-col relative text-xs leading-[2] tracking-[2.4px] ${
+            className={`phone-label flex gap-2 flex-col relative text-xs leading-[2] tracking-[2.4px] ${
               errors.phone ? 'text-error' : ''
             }`}
           >
@@ -130,8 +136,11 @@ export default function CareerForm() {
               placeholder="(097) 12 34 567"
             />
             {errors.phone && (
-              <div className="flex gap-1 items-center absolute right-0 top-[52px] lg:top-[58px]">
-                <ErrorIcon className="w-[18px] h-[18px]" />
+              <div className="flex gap-2 items-center absolute right-0 top-[56px] lg:top-[60px]">
+                <ErrorIcon
+                  className="w-[18px] h-[18px]"
+                  aria-label="error-icon"
+                />
                 <span className="text-error text-xs leading-[2] tracking-[2.4px]">
                   {errors.phone.message}
                 </span>
@@ -141,7 +150,7 @@ export default function CareerForm() {
         </div>
         <label
           htmlFor="message"
-          className="flex flex-col gap-1 relative text-xs leading-[2] tracking-[2.4px]"
+          className="flex flex-col gap-2 relative text-xs leading-[2] tracking-[2.4px]"
         >
           Message
           <textarea
@@ -151,7 +160,7 @@ export default function CareerForm() {
           />
         </label>
       </div>
-      <div className="md:flex md:flew-row md:justify-between">
+      <div className="flex flex-col smMax: gap-4 md:flex-row md:justify-between">
         <input
           type="checkbox"
           {...register('consent')}
@@ -176,14 +185,14 @@ export default function CareerForm() {
             alt="checked-checkbox"
             className="checkbox checked"
           />
-          <span className="md:w-[192px] lg:w-[258px]">
+          <span className=" w-[250px] md:w-[192px] lg:w-[258px]">
             I confirm my consent to the processing of personal data.
           </span>
         </label>
 
         <button
           type="submit"
-          className="text-[30px] font-medium block w-[82px] ml-auto"
+          className="text-[30px] font-medium block  smMax:ml-auto md:self-start"
         >
           SEND
         </button>

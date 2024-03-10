@@ -1,6 +1,7 @@
 'use client';
 import { Link } from 'react-scroll';
 import { useState } from 'react';
+import { AnimatePresence } from 'framer-motion';
 import LogoIcon from '../../../../public/images/logo.svg';
 import MobileMenu from '@/app/components/MobileMenu';
 
@@ -81,7 +82,9 @@ export default function Header() {
           </button>
         </nav>
       </div>
-      {isOpen && <MobileMenu onClose={handleClose} />}
+      <AnimatePresence initial={false} onExitComplete={() => null}>
+        {isOpen && <MobileMenu onClose={handleClose} />}
+      </AnimatePresence>
     </header>
   );
 }

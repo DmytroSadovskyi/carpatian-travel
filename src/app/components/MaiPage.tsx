@@ -27,7 +27,10 @@ export default function MainPage() {
         <Element name="gallery">
           <Gallery />
         </Element>
-        {/* <Element name="contacts"> <Contacts /></Element> */}
+        <Element name="contacts">
+          {' '}
+          <Contacts />
+        </Element>
       </main>
     </>
   );

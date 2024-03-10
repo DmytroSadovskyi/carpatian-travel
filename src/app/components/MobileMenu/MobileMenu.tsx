@@ -1,13 +1,15 @@
 import { MobileMenuProps } from '@/app/lib/definitions';
 import { Link } from 'react-scroll';
+import { motion } from 'framer-motion';
 
 export default function MobileMenu({ onClose }: MobileMenuProps) {
   return (
-    <div
-      style={{
-        background: 'rgba(1, 10, 5, 0.75)',
-      }}
-      className="fixed top-0 left-0 w-screen h-screen backdrop-blur-xl"
+    <motion.div
+      initial={{ opacity: 0, y: '-100%' }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      exit={{ opacity: 0, y: '-100%' }}
+      className="fixed top-0 left-0 w-screen h-screen bg-mobMenuBg backdrop-blur-xl "
     >
       <div className="container relative flex items-center justify-center w-full h-screen">
         <div className="absolute top-11 right-5">
@@ -72,6 +74,6 @@ export default function MobileMenu({ onClose }: MobileMenuProps) {
           </li>
         </ul>
       </div>
-    </div>
+    </motion.div>
   );
 }

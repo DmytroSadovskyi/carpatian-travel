@@ -26,6 +26,7 @@ const config: Config = {
       },
       colors: {
         input: 'rgba(255, 255, 255, 0.05)',
+        mobMenuBg: 'rgba(1, 10, 5, 0.75)',
         error: '#FF5757',
       },
     },

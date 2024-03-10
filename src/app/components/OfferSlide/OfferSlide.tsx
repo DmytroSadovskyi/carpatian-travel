@@ -64,7 +64,10 @@ export default function OfferSlide({
                 >
                   <div className="flex flex-row gap-4 md:gap-2 items-center">
                     {titleItem === title ? (
-                      <RectIcon className="w-[6px] h-[6px]" />
+                      <RectIcon
+                        className="w-[6px] h-[6px] "
+                        aria-label="rectangle-icon"
+                      />
                     ) : null}
                     <span className="uppercase">{titleItem}</span>
                   </div>

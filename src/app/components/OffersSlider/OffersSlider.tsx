@@ -24,6 +24,7 @@ export default function OffersSlider({ slides }: OffersSliderProps) {
       grabCursor={false}
       loop={true}
       effect={'fade'}
+      speed={1000}
       fadeEffect={{
         crossFade: true,
       }}
