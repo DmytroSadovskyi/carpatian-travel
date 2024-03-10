@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import CareerForm from '@/app/components/CareerForm';
 import { careerInfo } from '@/app/lib/careerInfo';
 export default function Career() {
@@ -9,53 +8,23 @@ export default function Career() {
           <div className="smMax:bg-career smMax:py-14 smMax:bg-center smMax:bg-cover  relative">
             <div className="smMax:container">
               <div className="md:flex md:flex-row md:justify-between lg:items-center">
-                <motion.h2
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true, amount: 0.5 }}
-                  transition={{ duration: 0.5 }}
-                  variants={{
-                    hidden: { opacity: 0, x: -100 },
-                    visible: { opacity: 1, x: 0 },
-                  }}
-                  className="uppercase text-[40px] smMax:mb-6 md:text-[67px] md:leading-none md:tracking-[-2.68px]  lg:text-[98px] lg:leading-none lg-tracking-[-3.92px] whitespace-nowrap font-thin"
-                >
+                <h2 className="uppercase text-[40px] smMax:mb-6 md:text-[67px] md:leading-none md:tracking-[-2.68px]  lg:text-[98px] lg:leading-none lg-tracking-[-3.92px] whitespace-nowrap font-thin">
                   Choose <span className="font-medium"> US</span>
-                </motion.h2>
-                <motion.p
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true, amount: 0.5 }}
-                  transition={{ duration: 0.5 }}
-                  variants={{
-                    hidden: { opacity: 0, x: 100 },
-                    visible: { opacity: 1, x: 0 },
-                  }}
-                  className="text-sm leading-[20px] font-extralight smMax:mb-9 max-w-[179px] smMax:ml-auto md:max-w-[221px] md:text-[13px] lg:max-w-[293px] lg:text-[18px] lg:leading-[24px]"
-                >
+                </h2>
+                <p className="text-sm leading-[20px] font-extralight smMax:mb-9 max-w-[179px] smMax:ml-auto md:max-w-[221px] md:text-[13px] lg:max-w-[293px] lg:text-[18px] lg:leading-[24px]">
                   Your chance to join our passionate team in Carpathian tourism.
                   Seeking talented professionals to share our common mission.
-                </motion.p>
+                </p>
               </div>
               <h3 className="uppercase text-[30px] font-extralight max-w-[179px] smMax:ml-auto smMax:mb-9 md:hidden">
                 Why us ?
               </h3>
               <div className="max-w-[181px] text-xs leading-[20px] text-right flex flex-col gap-4 md:hidden">
                 {careerInfo.map(item => (
-                  <motion.div
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, amount: 0.5 }}
-                    transition={{ duration: 0.5 }}
-                    variants={{
-                      hidden: { opacity: 0, x: -100 },
-                      visible: { opacity: 1, x: 0 },
-                    }}
-                    key={item.title}
-                  >
+                  <div key={item.title}>
                     <h3 className="text-sm mb-2">{item.title}</h3>
                     <p className="font-extralight">{item.description}</p>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
             </div>
