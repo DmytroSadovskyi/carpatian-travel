@@ -9,9 +9,9 @@ export default function Contacts() {
           Contact <span className="font-medium">US</span>
         </h2>
         <div className="lg:flex flex-row">
-          <div className="md:flex md:flex-row lg:flex-col">
+          <div className="md:flex md:flex-row lg:flex-col md:mb-[64px]">
             <div>
-              <div className="flex flex-row gap-5 mb-6 text-sm md:text-base lg:text-[18px] lg:mb-16 ">
+              <div className="flex flex-row gap-5 mb-6 text-sm md:text-base lg:text-[18px] lg:leading-[1.3] lg:mb-16 ">
                 <div className="flex flex-col ml-[25px]  md:ml-[64px] lg:ml-[141px]">
                   <a
                     href=" tel:+38 (098) 12 34 567"
@@ -30,7 +30,7 @@ export default function Contacts() {
                   Phone number
                 </p>
               </div>
-              <div className="flex flex-row gap-5 ml-[2px] items-center mb-6 md:ml-[34px] lg:mb-[124px] lg:ml-[107px] text-sm md:text-base lg:text-[18px] ">
+              <div className="flex flex-row gap-5 ml-[2px] items-center mb-6 md:ml-[34px] lg:mb-[124px] lg:ml-[107px] text-sm md:text-base lg:text-[18px] lg:leading-[1.3] ">
                 <a
                   href="mailto:support@carptravel.com"
                   className="smMax:leading-[1.7] underline"
