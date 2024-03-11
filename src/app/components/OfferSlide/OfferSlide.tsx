@@ -55,7 +55,7 @@ export default function OfferSlide({
                 <li
                   key={titleItem}
                   className={cn(
-                    'flex flex-row items-center gap-4 text-xl md:text-[22px] md:leading-[18px] leading-[17px] md:gap-2 lg:max-w-[500px] lg:w-full lg:flex lg:flex-row lg:justify-between cursor-pointer hover:opacity-100 duration-300',
+                    'flex flex-row items-center gap-4 text-xl md:text-[22px] md:leading-[0.8] leading-[0.9] md:gap-2 lg:max-w-[500px] lg:w-full lg:flex lg:flex-row lg:justify-between cursor-pointer hover:opacity-100 duration-300',
                     titleItem === title
                       ? 'font-medium'
                       : 'font-extralight opacity-50'
@@ -72,17 +72,17 @@ export default function OfferSlide({
                     <span className="uppercase">{titleItem}</span>
                   </div>
                   {titleItem === title ? (
-                    <p className="text-xs font-extralight hidden  lg:block md:leading-[24px] tracking-[2.4px] capitalize">
+                    <p className="text-xs font-extralight hidden  lg:block md:leading-[2] tracking-[2.4px] capitalize">
                       {slogan}
                     </p>
                   ) : null}
                 </li>
               ))}
             </ul>
-            <p className="text-xs font-extralight hidden mdMax:block md:leading-[24px]">
+            <p className="text-xs font-extralight hidden mdMax:block md:leading-[2]">
               {slogan}
             </p>
-            <p className="text-sm font-extralight md:text-[13px] xl:max-w-[293px] lg:ml-auto lg:text-lg lg:leading-[24px]">
+            <p className="text-sm font-extralight md:text-[13px] md:leading-[1.5] lg:max-w-[293px] lg:ml-auto lg:text-lg lg:leading-[1.3]">
               {description}
             </p>
           </div>

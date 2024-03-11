@@ -168,7 +168,7 @@ export default function CareerForm() {
           id="agreement"
         />
         <label
-          className="flex pl-8 font-extralight text-xs agreement-label relative leading-[22px]"
+          className="flex pl-8 font-extralight text-xs agreement-label relative leading-[1.8]"
           htmlFor="agreement"
         >
           <Image

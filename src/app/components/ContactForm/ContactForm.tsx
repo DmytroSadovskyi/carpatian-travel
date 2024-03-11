@@ -39,7 +39,7 @@ export default function ContactForm() {
       <div className="flex flex-col gap-4 mb-[16px] [&>input]:block font-extralight md:flex-row lg:flex-col lg:justify-between lg:gap-10">
         <div className="flex flex-col gap-4 md:gap-[28px] [&>input]:block font-extralight md:w-[221px]  lg:flex-row lg:w-full lg:justify-between">
           <label
-            className={`flex flex-col gap-2 relative text-xs leading-[24px] tracking-[2.4px] ${
+            className={`flex flex-col gap-2 relative text-xs leading-[2] tracking-[2.4px] ${
               errors.fullName ? 'text-error' : ''
             }`}
           >
@@ -64,7 +64,7 @@ export default function ContactForm() {
                   className="w-[18px] h-[18px]"
                   aria-label="error-icon"
                 />
-                <span className="text-error text-xs leading-[24px] tracking-[2.4px]">
+                <span className="text-error text-xs leading-[2] tracking-[2.4px]">
                   {errors.fullName.message}
                 </span>
               </div>
@@ -72,7 +72,7 @@ export default function ContactForm() {
           </label>
 
           <label
-            className={`flex flex-col gap-2 relative text-xs leading-[24px] tracking-[2.4px] ${
+            className={`flex flex-col gap-2 relative text-xs leading-[2] tracking-[2.4px] ${
               errors.email ? 'text-error' : ''
             }`}
           >
@@ -97,7 +97,7 @@ export default function ContactForm() {
                   className="w-[18px] h-[18px]"
                   aria-label="error-icon"
                 />
-                <span className="text-error text-xs leading-[24px] tracking-[2.4px]">
+                <span className="text-error text-xs leading-[2] tracking-[2.4px]">
                   {errors.email.message}
                 </span>
               </div>
@@ -106,7 +106,7 @@ export default function ContactForm() {
         </div>
         <label
           htmlFor="message"
-          className="flex flex-col gap-2 relative text-xs leading-[24px] tracking-[2.4px]"
+          className="flex flex-col gap-2 relative text-xs leading-[2] tracking-[2.4px]"
         >
           Message
           <textarea
@@ -116,10 +116,10 @@ export default function ContactForm() {
           />
         </label>
       </div>
-      <div className="md:flex md:flew-row md:justify-between ">
+      <div className="md:flex md:flew-row md:justify-between">
         <button
           type="submit"
-          className="text-[30px] font-medium block w-[82px] ml-auto "
+          className="text-[30px] font-medium block w-[82px] ml-auto"
         >
           SEND
         </button>
