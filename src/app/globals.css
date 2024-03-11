@@ -41,7 +41,6 @@ body {
 }
 
 .button {
-  display: block;
   position: relative;
   background: rgba(255, 255, 255, 0.1);
   border: none;
@@ -55,8 +54,8 @@ body {
 
 .button::before,
 .button::after,
-.button > span::before,
-.button > span::after {
+.button-span::before,
+.button-span::after {
   display: block;
   content: '';
   width: 42px;
@@ -76,13 +75,13 @@ body {
   border-top: 1px solid white;
   border-right: 1px solid white;
 }
-.button > span::before {
+.button-span::before {
   bottom: -1px;
   left: -1px;
   border-bottom: 1px solid white;
   border-left: 1px solid white;
 }
-.button > span::after {
+.button-span::after {
   bottom: -1px;
   right: -1px;
   border-bottom: 1px solid white;

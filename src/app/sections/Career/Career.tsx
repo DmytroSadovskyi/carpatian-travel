@@ -7,7 +7,7 @@ export default function Career() {
         <div className="flex flex-col">
           <div className="smMax:bg-career smMax:py-14 smMax:bg-center smMax:bg-cover">
             <div className="smMax:container">
-              <div className="md:flex md:flex-row md:justify-between lg:items-center">
+              <div className="md:flex md:flex-row md:justify-between lg:items-center lg:mb-6">
                 <h2 className="uppercase text-[40px] smMax:mb-6 md:text-[67px] md:leading-none md:tracking-[-2.68px]  lg:text-[98px] lg:leading-none lg-tracking-[-3.92px] whitespace-nowrap font-thin">
                   Choose <span className="font-medium"> US</span>
                 </h2>
