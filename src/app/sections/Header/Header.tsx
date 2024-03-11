@@ -18,8 +18,6 @@ export default function Header() {
     document.body.style.overflow = 'auto';
   };
 
-  const handleScroll = () => {};
-
   return (
     <header className="w-full py-9 z-10 absolute md:py-6">
       <div className="container">
@@ -35,7 +33,7 @@ export default function Header() {
                 smooth={true}
                 className="underline text-[14px] leading-none tracking-[1.4px]"
                 href="#"
-                onClick={handleScroll}
+                ignoreCancelEvents={true}
               >
                 About
               </Link>
@@ -46,7 +44,7 @@ export default function Header() {
                 smooth={true}
                 className="underline text-[14px] leading-none tracking-[1.4px]"
                 href="#"
-                onClick={handleScroll}
+                ignoreCancelEvents={true}
               >
                 Services
               </Link>
@@ -57,7 +55,7 @@ export default function Header() {
                 smooth={true}
                 className="underline text-[14px] leading-none tracking-[1.4px]"
                 href="#"
-                onClick={handleScroll}
+                ignoreCancelEvents={true}
               >
                 Career
               </Link>
@@ -68,7 +66,7 @@ export default function Header() {
                 smooth={true}
                 className="underline text-[14px] leading-none tracking-[1.4px]"
                 href="#"
-                onClick={handleScroll}
+                ignoreCancelEvents={true}
               >
                 Gallery
               </Link>
@@ -79,7 +77,7 @@ export default function Header() {
                 smooth={true}
                 className="underline text-[14px] leading-none tracking-[1.4px]"
                 href="#"
-                onClick={handleScroll}
+                ignoreCancelEvents={true}
               >
                 Contacts
               </Link>
