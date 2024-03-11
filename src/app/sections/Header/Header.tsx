@@ -32,6 +32,7 @@ export default function Header() {
                 to="about"
                 smooth={true}
                 className="underline text-[14px] leading-none tracking-[1.4px]"
+                href="#"
                 ignoreCancelEvents={true}
               >
                 About
@@ -42,6 +43,7 @@ export default function Header() {
                 to="services"
                 smooth={true}
                 className="underline text-[14px] leading-none tracking-[1.4px]"
+                href="#"
                 ignoreCancelEvents={true}
               >
                 Services
@@ -52,6 +54,7 @@ export default function Header() {
                 to="career"
                 smooth={true}
                 className="underline text-[14px] leading-none tracking-[1.4px]"
+                href="#"
                 ignoreCancelEvents={true}
               >
                 Career
@@ -62,6 +65,7 @@ export default function Header() {
                 to="gallery"
                 smooth={true}
                 className="underline text-[14px] leading-none tracking-[1.4px]"
+                href="#"
                 ignoreCancelEvents={true}
               >
                 Gallery
@@ -72,6 +76,7 @@ export default function Header() {
                 to="contacts"
                 smooth={true}
                 className="underline text-[14px] leading-none tracking-[1.4px]"
+                href="#"
                 ignoreCancelEvents={true}
               >
                 Contacts
