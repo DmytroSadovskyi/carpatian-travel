@@ -61,8 +61,8 @@ export default function GallerySlider({ images }: GalleryListProps) {
             {({ isActive }) => (
               <div
                 className={cn(
-                  'relative right-[80px] w-[415px] lg:w-[606px] h-[294px] lg:h-[429px]',
-                  isActive ? 'right-[90px] lg:right-[95px]' : 'opacity-[0.5]'
+                  'wrapper  relative right-[80px] w-[415px] lg:w-[606px] h-[294px] lg:h-[429px]',
+                  isActive ? 'before:hidden right-[90px] lg:right-[95px]' : ''
                 )}
               >
                 <GalleryItem url={image.url} alt={image.alt} />
