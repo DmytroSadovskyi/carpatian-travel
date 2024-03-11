@@ -32,6 +32,7 @@ export default function Header() {
                 to="about"
                 smooth={true}
                 className="underline text-[14px] leading-none tracking-[1.4px]"
+                href="#"
               >
                 About
               </Link>
@@ -41,6 +42,7 @@ export default function Header() {
                 to="services"
                 smooth={true}
                 className="underline text-[14px] leading-none tracking-[1.4px]"
+                href="#"
               >
                 Services
               </Link>
@@ -50,6 +52,7 @@ export default function Header() {
                 to="career"
                 smooth={true}
                 className="underline text-[14px] leading-none tracking-[1.4px]"
+                href="#"
               >
                 Career
               </Link>
@@ -59,6 +62,7 @@ export default function Header() {
                 to="gallery"
                 smooth={true}
                 className="underline text-[14px] leading-none tracking-[1.4px]"
+                href="#"
               >
                 Gallery
               </Link>
@@ -68,6 +72,7 @@ export default function Header() {
                 to="contacts"
                 smooth={true}
                 className="underline text-[14px] leading-none tracking-[1.4px]"
+                href="#"
               >
                 Contacts
               </Link>

@@ -13,6 +13,9 @@ export default function OfferSlide({
   titles,
   slideTo,
 }: OffersSlideProps) {
+  const handleSlideChange = (index: number) => {
+    slideTo(index);
+  };
   return (
     <div className="w-full h-full relative bg-gradient">
       <Image
@@ -53,14 +56,21 @@ export default function OfferSlide({
             <ul className="pb-[34px] md:pb-0 flex flex-col gap-4 lg:pb-[104px]">
               {titles.map((titleItem, index) => (
                 <li
+                  tabIndex={0}
                   key={titleItem}
                   className={cn(
-                    'flex flex-row items-center gap-4 text-xl md:text-[22px] md:leading-[0.8] leading-[0.9] md:gap-2 lg:max-w-[500px] lg:w-full lg:flex lg:flex-row lg:justify-between cursor-pointer hover:opacity-100 duration-300',
+                    'flex flex-row items-center gap-4 text-xl md:text-[22px] md:leading-[0.8] leading-[0.9] md:gap-2 lg:max-w-[500px] lg:w-full lg:flex lg:flex-row lg:justify-between cursor-pointer focus:opacity-100 hover:opacity-100 duration-300',
                     titleItem === title
                       ? 'font-medium'
                       : 'font-extralight opacity-50'
                   )}
-                  onClick={() => slideTo(index + 1)}
+                  onClick={() => handleSlideChange(index + 1)}
+                  onKeyDown={event => {
+                    if (event.key === 'Enter') {
+                      handleSlideChange(index + 1);
+                    }
+                  }}
+                  role="button"
                 >
                   <div className="flex flex-row gap-4 md:gap-2 items-center">
                     {titleItem === title ? (

@@ -119,7 +119,7 @@ export default function ContactForm() {
       <div className="md:flex md:flew-row md:justify-between">
         <button
           type="submit"
-          className="text-[30px] font-medium block w-[82px] ml-auto"
+          className="text-[30px] font-medium block w-[82px] ml-auto hover:opacity-[0.5] focus:opacity-[0.5] duration-300"
         >
           SEND
         </button>

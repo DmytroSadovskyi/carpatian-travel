@@ -30,6 +30,7 @@ export default function Hero() {
             to="contacts"
             smooth={true}
             className="button text-center md:self-end uppercase font-bold text-lg leading-[2.7] lg:text-[32px] lg:py-4 lg:leading-[1] w-full block"
+            href="#"
           >
             <span className="button-span">join now</span>
           </Link>

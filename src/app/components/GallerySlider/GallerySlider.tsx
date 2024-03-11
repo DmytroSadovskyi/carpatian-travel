@@ -73,14 +73,14 @@ export default function GallerySlider({ images }: GalleryListProps) {
       </Swiper>
       <div className="absolute z-10 flex justify-between flex-row bottom-4 left-[45px] right-[25px] lg:left-[211px] lg:right-[184px]">
         <button
-          className="font-thin text-[33px] leading-none uppercase"
+          className="font-thin text-[33px] leading-none uppercase hover:opacity-[0.5] focus:opacity-[0.5] duration-300"
           onClick={() => swiperRef.current?.slidePrev()}
           type="button"
         >
           Back
         </button>
         <button
-          className="font-thin text-[33px] leading-none uppercase"
+          className="font-thin text-[33px] leading-none uppercase hover:opacity-[0.5] focus:opacity-[0.5] duration-300"
           onClick={() => swiperRef.current?.slideNext()}
           type="button"
         >

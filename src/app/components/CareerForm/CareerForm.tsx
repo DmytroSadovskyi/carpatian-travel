@@ -192,7 +192,7 @@ export default function CareerForm() {
 
         <button
           type="submit"
-          className="text-[30px] font-medium block  smMax:ml-auto md:self-start"
+          className="text-[30px] font-medium block  smMax:ml-auto md:self-start hover:opacity-[0.5] focus:opacity-[0.5] duration-300"
         >
           SEND
         </button>
