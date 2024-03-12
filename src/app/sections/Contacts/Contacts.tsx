@@ -3,7 +3,7 @@ import ContactForm from '@/app/components/ContactForm';
 
 export default function Contacts() {
   return (
-    <section className="bg-contacts bg-cover bg-center bg-no-repeat md:bg-contactsTab lg:bg-contactsDesc py-[54px] md:py-[64px] lg:py-[104px]">
+    <section className="bg-background-contacts bg-contacts bg-cover bg-center bg-no-repeat md:bg-contactsTab lg:bg-contactsDesc py-[54px] md:py-[64px] lg:py-[104px]">
       <div className="container">
         <h2 className="uppercase text-[40px] leading-[1.4] tracking-[-1.6px] mb-9 md:text-[67px] md:leading-none md:tracking-[-2.68px]  lg:text-[98px] lg:leading-none lg-tracking-[-3.92px] lg:mb-[71px] whitespace-nowrap font-thin">
           Contact <span className="font-medium">US</span>

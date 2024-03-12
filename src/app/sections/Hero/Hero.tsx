@@ -3,7 +3,7 @@ import { Link } from 'react-scroll';
 
 export default function Hero() {
   return (
-    <section className="bg-hero pt-[106px] pb-[56px] md:bg-heroTab md:pt-[124px] lg:bg-heroDesc lg:pt-[130px] lg:pb-[104px] bg-cover bg-center bg-no-repeat gradient">
+    <section className="bg-background-hero bg-hero pt-[106px] pb-[56px] md:bg-heroTab md:pt-[124px] lg:bg-heroDesc lg:pt-[130px] lg:pb-[104px] bg-cover bg-center bg-no-repeat gradient">
       <div className="container flex flex-col gap-6 md:grid md:grid-cols-[426px_230px]  md:gap-y-0 md:grid-rows-[87px_56px_160px_28px_0px] lg:grid-cols-[646px_294px] lg:grid-rows-[128px_181px_198px_28px_0px] justify-between">
         <p className="flex self-end flex-col md:col-start-2">
           <span className="text-[37px]/[80%] uppercase font-thin tracking-[3.665px] md:text-[67px]/[80%] md:tracking-[5.71px] lg:tracking-[0.71px] lg:text-[98px]/[80%]">

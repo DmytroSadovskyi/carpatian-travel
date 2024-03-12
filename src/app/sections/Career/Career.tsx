@@ -2,7 +2,7 @@ import CareerForm from '@/app/components/CareerForm';
 import { careerInfo } from '@/app/lib/careerInfo';
 export default function Career() {
   return (
-    <section className="md:bg-careerTab lg:bg-careerDesc bg-cover bg-center smMax:py-0 md:py-[64px] lg:py-[104px]">
+    <section className="bg-background-career md:bg-careerTab lg:bg-careerDesc bg-cover bg-center smMax:py-0 md:py-[64px] lg:py-[104px]">
       <div className="md:container">
         <div className="flex flex-col">
           <div className="smMax:bg-career smMax:py-14 smMax:bg-center smMax:bg-cover">
