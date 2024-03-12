@@ -142,7 +142,7 @@ body {
 .phone-label::after {
   content: '+38';
   position: absolute;
-  bottom: 0.7px;
+  bottom: 0px;
   left: 8px;
   color: #fff;
   width: 36px;
@@ -154,6 +154,7 @@ body {
 
 @media screen and (min-width: 1280px) {
   .phone-label::after {
+    bottom: 2px;
     font-size: 20px;
   }
 }
