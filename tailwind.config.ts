@@ -29,6 +29,13 @@ const config: Config = {
         mobMenuBg: 'rgba(1, 10, 5, 0.75)',
         error: '#FF5757',
       },
+      backgroundColor: {
+        'background-hero': 'rgba(2, 15, 8, 0.50)',
+        'background-about': 'rgba(2, 15, 8, 0.50)',
+        'background-career': 'rgba(2, 15, 8, 0.75)',
+        'background-gallery': 'rgba(2, 15, 8, 0.85)',
+        'background-contacts': 'rgba(2, 15, 8, 0.75)',
+      },
     },
 
     backgroundImage: {
@@ -62,13 +69,6 @@ const config: Config = {
         "image-set(url('/images/bg/sections/contacts/contactsTab-min.png') 1x, url('/images/bg/sections/contacts/contactsTab@2x-min.png') 2x)",
       contactsDesc:
         "image-set(url('/images/bg/sections/contacts/contactsDesc-min.png') 1x, url('/images/bg/sections/contacts/contactsDesc@2x-min.png') 2x)",
-    },
-    backgroundColor: {
-      'background-hero': 'rgba(2, 15, 8, 0.50)',
-      'background-about': 'rgba(2, 15, 8, 0.50)',
-      'background-career': 'rgba(2, 15, 8, 0.75)',
-      'background-gallery': 'rgba(2, 15, 8, 0.85)',
-      'background-contacts': 'rgba(2, 15, 8, 0.75)',
     },
   },
   plugins: [],
