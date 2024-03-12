@@ -72,11 +72,11 @@ Offers and Gallery sections.
 
 **1.Clone the repository:**
 
-`git clone` https://github.com/DmytroSadovskyicarpatian-travel.git
+`git clone` https://github.com/DmytroSadovskyi/carpatian-travel.git
 
 **2.Navigate to the project directory:**
 
-`cd` carp-travel
+`cd` carpatian-travel
 
 **3.Install dependencies:**
 
