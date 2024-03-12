@@ -105,12 +105,12 @@ export default function ContactForm() {
           </label>
         </div>
         <label
-          htmlFor="message"
+          htmlFor="visitor-message"
           className="flex flex-col gap-2 relative text-xs leading-[2] tracking-[2.4px]"
         >
           Message
           <textarea
-            id="message"
+            id="visitor-message"
             {...register('message')}
             className="w-full  px-2 bg-input h-[196px] md:w-[463px] md:h-[221px] lg:w-full lg:h-[174px]   text-white placeholder:opacity-[0.2] resize-none"
           />
