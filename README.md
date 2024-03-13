@@ -29,13 +29,6 @@ simplify styling.
 
 **Usage:** Enables clean and maintainable UI design throughout the project.
 
-### Framer Motion
-
-**Description:** A library facilitating smooth animations, specifically utilized
-for enhancing the mobile menu experience.
-
-**Usage:** Enhances user interaction and engagement with subtle motion effects.
-
 ### React-Scroll
 
 **Description:** A library for achieving smooth scrolling within the website,

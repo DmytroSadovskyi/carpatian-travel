@@ -37,17 +37,6 @@ body {
   width: 100%;
 }
 
-.mobile-menu {
-  opacity: 0;
-  transform: translateY(-100%);
-  transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-.mobile-menu.open {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 .button {
   position: relative;
   background: rgba(255, 255, 255, 0.1);
@@ -77,18 +66,21 @@ body {
   border-top: 1px solid white;
   border-left: 1px solid white;
 }
+
 .button::after {
   top: -1px;
   right: -1px;
   border-top: 1px solid white;
   border-right: 1px solid white;
 }
+
 .button-span::before {
   bottom: -1px;
   left: -1px;
   border-bottom: 1px solid white;
   border-left: 1px solid white;
 }
+
 .button-span::after {
   bottom: -1px;
   right: -1px;
