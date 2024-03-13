@@ -1,15 +1,14 @@
 import { Link } from 'react-scroll';
-import { motion } from 'framer-motion';
 import { MobileMenuProps } from '@/lib/definitions';
 
-export default function MobileMenu({ onClose }: MobileMenuProps) {
+export default function MobileMenu({ onClose, isOpen }: MobileMenuProps) {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: '-100%' }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-      exit={{ opacity: 0, y: '-100%' }}
-      className="fixed top-0 left-0 w-screen h-screen bg-mobMenuBg backdrop-blur-xl "
+    <div
+      className={`fixed top-0 left-0 w-full h-full bg-mobMenuBg backdrop-blur-xl transform  ${
+        isOpen
+          ? 'translate-y-0 opacity-1 visible'
+          : '-translate-y-full opacity-0 invisible '
+      } transition-all duration-500 ease-in-out`}
     >
       <div className="container relative flex items-center justify-center w-full h-screen">
         <div className="absolute top-11 right-5">
@@ -74,6 +73,6 @@ export default function MobileMenu({ onClose }: MobileMenuProps) {
           </li>
         </ul>
       </div>
-    </motion.div>
+    </div>
   );
 }

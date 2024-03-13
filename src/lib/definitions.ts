@@ -30,6 +30,7 @@ export type GalleryItem = {
 
 export interface MobileMenuProps {
   onClose: () => void;
+  isOpen: boolean;
 }
 
 export interface OffersSliderProps {

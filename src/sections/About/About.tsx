@@ -1,6 +1,9 @@
 export default function About() {
   return (
-    <section className="bg-background-about bg-about bg-cover bg-[20%_50%] bg-no-repeat py-[54px] md:py-[64px] md:bg-aboutTab lg:bg-aboutDesc  lg:py-[104px]" id="about">
+    <section
+      className="bg-background-about bg-about bg-cover bg-[20%_50%] bg-no-repeat py-[54px] md:py-[64px] md:bg-aboutTab lg:bg-aboutDesc  lg:py-[104px]"
+      id="about"
+    >
       <div className="container grid gap-2 md:grid-cols-[218px_266px_220px] md:grid-rows-[295px_215px_117px] md:gap-x-0 md:gap-y-4 lg:grid-cols-[50%_25%_25%] lg:grid-rows-[250px_192px_120px]">
         <h2 className="mb-[5px] font-thin text-4xl leading-[1.4] tracking-[-1.6px] md:col-start-1 md:col-end-3 md:text-[67px] md:leading-none md:tracking-[-2.68px] lg:text-[98px] lg:leading-none lg:tracking-[-3.92px]  lg:col-end-2 lg:mb-0">
           WHO <span className="font-medium">WE ARE</span>
