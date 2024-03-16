@@ -41,7 +41,7 @@ export default function ContactForm() {
       
     `;
     try {
-      await sendMessage(JSON.stringify(formattedMessage));
+      await sendMessage(formattedMessage);
       toast.success('Form submitted successfully');
       reset();
     } catch (error) {

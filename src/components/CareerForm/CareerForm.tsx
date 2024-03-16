@@ -49,7 +49,7 @@ export default function CareerForm() {
       Consent: ${data.consent ? 'Yes' : 'No'}
     `;
     try {
-      await sendMessage(JSON.stringify(formattedMessage));
+      await sendMessage(formattedMessage);
       toast.success('Form submitted successfully');
       reset();
     } catch (error) {
