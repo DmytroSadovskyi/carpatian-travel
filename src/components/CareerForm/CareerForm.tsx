@@ -40,8 +40,16 @@ export default function CareerForm() {
   });
 
   const onSubmit: SubmitHandler<Inputs> = async data => {
+    const formattedMessage = `
+      Full Name: ${data.fullName}
+      Email: ${data.email}
+      Position: ${data.position}
+      Phone: ${data.phone}
+      Message: ${data.message}
+      Consent: ${data.consent ? 'Yes' : 'No'}
+    `;
     try {
-      await sendMessage(JSON.stringify(data));
+      await sendMessage(JSON.stringify(formattedMessage));
       toast.success('Form submitted successfully');
       reset();
     } catch (error) {

@@ -34,8 +34,14 @@ export default function ContactForm() {
   });
 
   const onSubmit: SubmitHandler<Inputs> = async data => {
+    const formattedMessage = `
+      Full Name: ${data.fullName}
+     
+      Message: ${data.message}
+      
+    `;
     try {
-      await sendMessage(JSON.stringify(data));
+      await sendMessage(JSON.stringify(formattedMessage));
       toast.success('Form submitted successfully');
       reset();
     } catch (error) {
