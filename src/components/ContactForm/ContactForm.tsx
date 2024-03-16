@@ -27,7 +27,7 @@ export default function ContactForm() {
     mode: 'onChange',
   });
 
-  useFormPersist('contactFormValues', {
+  const { clear } = useFormPersist('contactFormValues', {
     watch,
     setValue,
     storage: typeof window !== 'undefined' ? window.localStorage : undefined, // default window.sessionStorage
@@ -35,15 +35,14 @@ export default function ContactForm() {
 
   const onSubmit: SubmitHandler<Inputs> = async data => {
     const formattedMessage = `
-      Full Name: ${data.fullName}
-     
-      Message: ${data.message}
-      
+      Full Name: ${data.fullName}\n
+      Message: ${data.message}\n
     `;
     try {
       await sendMessage(formattedMessage);
       toast.success('Form submitted successfully');
       reset();
+      clear();
     } catch (error) {
       toast.error('Failed to submit form. Please try again later.');
     }

@@ -33,25 +33,27 @@ export default function CareerForm() {
     mode: 'onChange',
   });
 
-  useFormPersist('careerFormValues', {
+  const { clear } = useFormPersist('careerFormValues', {
     watch,
     setValue,
+
     storage: typeof window !== 'undefined' ? window.localStorage : undefined, // default window.sessionStorage
   });
 
   const onSubmit: SubmitHandler<Inputs> = async data => {
     const formattedMessage = `
-      Full Name: ${data.fullName}
-      Email: ${data.email}
-      Position: ${data.position}
-      Phone: ${data.phone}
-      Message: ${data.message}
-      Consent: ${data.consent ? 'Yes' : 'No'}
+  Full Name: ${data.fullName}\n
+  Email: ${data.email}\n
+  ${data.position ? `Position: ${data.position}\n` : ''}\n
+  Phone: ${data.phone}\n
+  ${data.message ? `Message: ${data.message}\n` : ''}\n
+  Consent: ${data.consent ? 'Yes' : 'No'}\n
     `;
     try {
       await sendMessage(formattedMessage);
       toast.success('Form submitted successfully');
       reset();
+      clear();
     } catch (error) {
       toast.error('Failed to submit form. Please try again later.');
     }
