@@ -1,5 +1,6 @@
 'use client';
 import { useForm, SubmitHandler } from 'react-hook-form';
+import useFormPersist from 'react-hook-form-persist';
 import { Toaster, toast } from 'react-hot-toast';
 import ErrorIcon from '../../../public/icons/error.svg';
 
@@ -18,10 +19,17 @@ export default function ContactForm() {
     register,
     handleSubmit,
     reset,
-
+    watch,
+    setValue,
     formState: { errors },
   } = useForm<Inputs>({
     mode: 'onChange',
+  });
+
+  useFormPersist('contactFormValues', {
+    watch,
+    setValue,
+    storage: typeof window !== 'undefined' ? window.localStorage : undefined, // default window.sessionStorage
   });
 
   const onSubmit: SubmitHandler<Inputs> = data => {

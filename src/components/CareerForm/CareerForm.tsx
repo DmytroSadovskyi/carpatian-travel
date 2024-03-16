@@ -1,9 +1,9 @@
 'use client';
 import { useForm, SubmitHandler } from 'react-hook-form';
-import { useState, useEffect } from 'react';
+import useFormPersist from 'react-hook-form-persist';
 import { Toaster, toast } from 'react-hot-toast';
 import Image from 'next/image';
-import { useLocalStorage } from '@/hooks/useLocalStorage';
+
 import ErrorIcon from '../../../public/icons/error.svg';
 
 type Inputs = {
@@ -15,58 +15,37 @@ type Inputs = {
   consent: boolean;
 };
 
-const initValues = {
-  fullName: '',
-  email: '',
-  position: '',
-  phone: '',
-  message: '',
-  consent: false,
-};
-
 export default function CareerForm() {
   const fullNameRegexp = /^[A-Za-z\s]+$/;
   const emailRegexp =
     /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   const phoneRegexp = /^0[ \-\d]+$/;
-  const [storage, setStorage] = useLocalStorage('formValues', initValues);
-  const [isLoaded, setIsLoaded] = useState(false);
 
   const {
     register,
     handleSubmit,
     reset,
     watch,
+    setValue,
     formState: { errors },
   } = useForm<Inputs>({
     mode: 'onChange',
-    defaultValues: storage,
   });
 
-  const formData = watch();
-
-  useEffect(() => {
-    if (!isLoaded) {
-      reset(storage);
-      setIsLoaded(true);
-    }
-  }, [storage, reset, isLoaded]);
-
-  const onChange = () => {
-    setStorage(formData);
-  };
+  useFormPersist('careerFormValues', {
+    watch,
+    setValue,
+    storage: typeof window !== 'undefined' ? window.localStorage : undefined, // default window.sessionStorage
+  });
 
   const onSubmit: SubmitHandler<Inputs> = data => {
-    console.log(data);
     toast.success('Form submitted successfully');
-    reset(initValues);
-    localStorage.clear();
+    reset();
   };
 
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      onChange={onChange}
       className="flex flex-col gap-4 lg:gap-9"
     >
       <Toaster />
