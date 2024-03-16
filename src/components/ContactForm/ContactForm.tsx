@@ -3,6 +3,7 @@ import { useForm, SubmitHandler } from 'react-hook-form';
 import useFormPersist from 'react-hook-form-persist';
 import { Toaster, toast } from 'react-hot-toast';
 import ErrorIcon from '../../../public/icons/error.svg';
+import { sendMessage } from '@/api/telegram';
 
 type Inputs = {
   fullName: string;
@@ -32,10 +33,14 @@ export default function ContactForm() {
     storage: typeof window !== 'undefined' ? window.localStorage : undefined, // default window.sessionStorage
   });
 
-  const onSubmit: SubmitHandler<Inputs> = data => {
-    console.log(data);
-    toast.success('Form submitted successfully');
-    reset();
+  const onSubmit: SubmitHandler<Inputs> = async data => {
+    try {
+      await sendMessage(JSON.stringify(data));
+      toast.success('Form submitted successfully');
+      reset();
+    } catch (error) {
+      toast.error('Failed to submit form. Please try again later.');
+    }
   };
 
   return (

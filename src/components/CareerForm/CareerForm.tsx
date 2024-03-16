@@ -5,6 +5,7 @@ import { Toaster, toast } from 'react-hot-toast';
 import Image from 'next/image';
 
 import ErrorIcon from '../../../public/icons/error.svg';
+import { sendMessage } from '@/api/telegram';
 
 type Inputs = {
   fullName: string;
@@ -38,9 +39,14 @@ export default function CareerForm() {
     storage: typeof window !== 'undefined' ? window.localStorage : undefined, // default window.sessionStorage
   });
 
-  const onSubmit: SubmitHandler<Inputs> = data => {
-    toast.success('Form submitted successfully');
-    reset();
+  const onSubmit: SubmitHandler<Inputs> = async data => {
+    try {
+      await sendMessage(JSON.stringify(data));
+      toast.success('Form submitted successfully');
+      reset();
+    } catch (error) {
+      toast.error('Failed to submit form. Please try again later.');
+    }
   };
 
   return (
