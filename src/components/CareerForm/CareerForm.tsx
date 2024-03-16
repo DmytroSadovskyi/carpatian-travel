@@ -42,12 +42,12 @@ export default function CareerForm() {
 
   const onSubmit: SubmitHandler<Inputs> = async data => {
     const formattedMessage = `
-  Full Name: ${data.fullName}\n
+  Full Name: ${data.fullName}
   Email: ${data.email}\n
-  ${data.position ? `Position: ${data.position}\n` : ''}\n
+  ${data.position ? `Position: ${data.position}\n` : ''}
   Phone: ${data.phone}\n
-  ${data.message ? `Message: ${data.message}\n` : ''}\n
-  Consent: ${data.consent ? 'Yes' : 'No'}\n
+  ${data.message ? `Message: ${data.message}\n` : ''}
+  Consent: ${data.consent ? 'Yes' : 'No'}
     `;
     try {
       await sendMessage(formattedMessage);
