@@ -35,11 +35,9 @@ export default function ContactForm() {
 
   const onSubmit: SubmitHandler<Inputs> = async data => {
     const formattedMessage = `
-      Full Name: ${data.fullName}\n
-
-      Email: ${data.email}\n
-      
-      ${data.message ? `Message: ${data.message}\n` : ''}\n
+      %0AFull Name: ${data.fullName}
+      %0AEmail: ${data.email}
+      %0A${data.message ? `Message: ${data.message}\n` : ''}
     `;
     try {
       await sendMessage(formattedMessage);

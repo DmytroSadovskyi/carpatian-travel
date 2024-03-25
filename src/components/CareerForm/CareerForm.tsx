@@ -41,20 +41,21 @@ export default function CareerForm() {
   });
 
   const onSubmit: SubmitHandler<Inputs> = async data => {
-    const formattedMessage = `
-  Full Name: ${data.fullName}
-  Email: ${data.email}\n
-  ${data.position ? `Position: ${data.position}\n` : ''}
-  Phone: ${data.phone}\n
-  ${data.message ? `Message: ${data.message}\n` : ''}
-  Consent: ${data.consent ? 'Yes' : 'No'}
+    const formattedMessage = `Full Name: ${data.fullName}
+    %0AEmail: ${data.email}
+    %0A${data.position ? `Position: ${data.position}` : ''}
+    %0APhone: ${data.phone} 
+    %0A${data.message ? `Message: ${data.message}` : ''}
+    %0AConsent: ${data.consent ? 'Yes' : 'No'}
     `;
+
     try {
       await sendMessage(formattedMessage);
       toast.success('Form submitted successfully');
+
       reset();
       clear();
-    } catch (error) {
+    } catch (error: any) {
       toast.error('Failed to submit form. Please try again later.');
     }
   };
