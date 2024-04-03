@@ -9,9 +9,15 @@ const inter = Inter({
   display: 'swap',
 });
 
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL as string;
+
 export const metadata: Metadata = {
+  metadataBase: new URL(baseUrl),
   title: 'CarpTravel',
   description: 'Website for CarpTravel travel agency',
+  alternates: {
+    canonical: baseUrl,
+  },
   icons: {
     icon: [
       {
@@ -28,7 +34,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: 'website',
-    url: 'https://carpatian-travel.vercel.app/',
+    url: `${baseUrl}`,
     title: 'CarpTravel',
     description: 'Website for CarpTravel travel agency',
     siteName: 'CarpTravel',
